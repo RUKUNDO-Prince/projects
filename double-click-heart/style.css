@@ -1,11 +1,11 @@
-@import url("https://fonts.googleapis.com/css2?family=Oswald&display=swap");
+@import url('https://fonts.googleapis.com/css?family=Oswald');
 
 * {
   box-sizing: border-box;
 }
 
 body {
-  font-family: "Oswald", sans-serif;
+  font-family: 'Oswald', sans-serif;
   text-align: center;
   overflow: hidden;
   margin: 0;
@@ -29,13 +29,14 @@ small {
 .loveMe {
   height: 440px;
   width: 300px;
-  background: url("https://images.unsplash.com/photo-1597540103960-2a6528f09ae9?ixid=MXwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHw%3D&ixlib=rb-1.2.1&auto=format&fit=crop&w=321&q=80")
+  background: url('https://images.unsplash.com/photo-1504215680853-026ed2a45def?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=334&q=80')
     no-repeat center center/cover;
   margin: auto;
   cursor: pointer;
   max-width: 100%;
   position: relative;
   box-shadow: 0 14px 28px rgba(0, 0, 0, 0.25), 0 10px 10px rgba(0, 0, 0, 0.22);
+  overflow: hidden;
 }
 
 .loveMe .fa-heart {
