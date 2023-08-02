@@ -1,44 +1,17 @@
 <!DOCTYPE html>
-<html lang="en" dir="ltr">
-  <head>
-    <meta charset="utf-8">
-    <title>Cursor Animation | On Mousemove, Mouseout, MouseStopped</title>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="style.css">
-  </head>
-  <body>
-
+    <title>CURSOR ANIMATION</title>
+</head>
+<body>
     <div class="cursor"></div>
-
     <section class="main">
-      <h1>Cursor Animation</h1>
+        <h1>CURSOR ANIMATIONS</h1>
     </section>
-
-    <script type="text/javascript">
-    const cursor = document.querySelector(".cursor");
-    var timeout;
-
-    //follow cursor on mousemove
-    document.addEventListener("mousemove", (e) => {
-      let x = e.pageX;
-      let y = e.pageY;
-
-      cursor.style.top = y + "px";
-      cursor.style.left = x + "px";
-      cursor.style.display = "block";
-
-      //cursor effects when mouse stopped
-      function mouseStopped(){
-        cursor.style.display = "none";
-      }
-      clearTimeout(timeout);
-      timeout = setTimeout(mouseStopped, 1000);
-    });
-
-    //cursor effects when mouseout
-    document.addEventListener("mouseout", () => {
-      cursor.style.display = "none";
-    });
-    </script>
-
-  </body>
+    <script src="main.js"></script>
+</body>
 </html>
