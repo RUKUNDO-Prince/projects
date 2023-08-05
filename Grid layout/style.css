@@ -1,0 +1,26 @@
+body{
+    margin: 15px;
+    padding: 0;
+}
+.bg{
+    background: url(image.jpg);
+}
+.container{
+    display: grid;
+    grid-gap: 15px;
+    grid-template-columns: repeat(3, 1fr);
+}
+.container div{
+    height: 220px;
+    background-size: cover;
+    background-attachment: fixed;
+}
+.container div:nth-child(1){
+    grid-column: 1 / 3;
+}
+.container div:nth-child(7){
+    grid-column: 2 / 4;
+}
+.container div:nth-child(11){
+    grid-column: 1 / 4;
+}
