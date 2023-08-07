@@ -1,0 +1,27 @@
+div svg {
+  width: 300px;
+}
+
+div {
+  position: absolute;
+  overflow: auto;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%,-50%);
+}
+
+	.st0{fill:none;stroke:#07588A;stroke-linecap:round;stroke-linejoin:round;stroke-miterlimit:10;}
+
+.st0 {
+    stroke-dasharray: 745;
+    animation: draw 7s ease-in-out infinite;
+}
+    
+@keyframes draw {
+    0% {
+        stroke-dashoffset: 1489;
+    }
+    100% {
+        stroke-dashoffset: 0;
+    }
+}
