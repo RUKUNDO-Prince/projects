@@ -1,0 +1,157 @@
+:root {
+  --golden-glow: #ffad00;
+}
+
+body {
+  height: 100vh;
+  width: 100vw;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  background-color: #ececec;
+}
+
+html {
+  font-size: 10px;
+}
+
+* {
+  box-sizing: border-box;
+  padding: 0;
+  margin: 0;
+}
+
+.rings {
+  position: relative;
+}
+
+.ring {
+  box-shadow: 
+    -10px -10px 15px rgba(255, 255, 255, 0.3),
+    10px 10px 15px rgba(70, 70, 70, 0.15),
+    inset -10px -10px 15px rgba(255, 255, 255, 0.3),
+    inset 10px 10px 15px rgba(70, 70, 70, 0.15);
+  border: 13px solid #ececec;
+  border-radius: 50%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.ring1 {
+  height: 28rem;
+  width: 28rem;
+  animation: glow1 2.5s infinite;
+}
+
+@keyframes glow1 {
+  60% {
+    background-color: #ececec;
+  }
+  80% {
+    background-color: var(--golden-glow);
+  }
+  100% {
+    background-color: var(--golden-glow);
+  }
+}
+
+.ring2 {
+  height: 20rem;
+  width: 20rem;
+  animation: glow2 2.5s infinite;
+}
+
+@keyframes glow2 {
+  40% {
+    background-color: #ececec;
+  }
+  60% {
+    background-color: var(--golden-glow);
+  }
+  100% {
+    background-color: var(--golden-glow);
+  }
+}
+
+.ring3 {
+  height: 12rem;
+  width: 12rem;
+  animation: glow3 2.5s infinite;
+}
+
+@keyframes glow3 {
+  20% {
+    background-color: #ececec;
+  }
+  40% {
+    background-color: var(--golden-glow);
+  }
+  100% {
+    background-color: var(--golden-glow);
+  }
+}
+
+.ring4 {
+  height: 5rem;
+  width: 5rem;
+  animation: glow4 2.5s infinite;
+}
+
+@keyframes glow4 {
+  0% {
+    background-color: #ececec;
+  }
+  20% {
+    background-color: var(--golden-glow);
+  }
+  100% {
+    background-color: var(--golden-glow);
+  }
+}
+
+.choose-theme {
+  margin-top: 5rem;
+  display: flex;
+  column-gap: 10px;
+}
+
+.theme {
+  width: 3rem;
+  height: 3rem;
+  cursor: pointer;
+  border: 5px solid #ececec;
+  box-shadow: 
+    -10px -10px 15px rgba(255, 255, 255, 0.3),
+    10px 10px 15px rgba(70, 70, 70, 0.15),
+    inset -10px -10px 15px rgba(255, 255, 255, 0.3),
+    inset 10px 10px 15px rgba(70, 70, 70, 0.15);
+  border-radius: 50%;
+}
+
+.theme1 {
+  background-color: #ffad00;
+}
+.theme2 {
+  background-color: #01c5c4;
+  
+}
+.theme3 {
+    background-color: #ffa5a5;
+ 
+}
+.theme4 {
+    background-color: #d789d7;
+  
+}
+.theme5 {
+    background-color: #f09ae9;
+  
+}
+.theme6 {
+  background-color: #e7305b;
+}
+.theme7 {
+  background-color: #303960;
+}
