@@ -1,0 +1,1 @@
+/* JS: how should I React? */
