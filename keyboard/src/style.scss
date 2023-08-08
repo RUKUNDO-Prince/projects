@@ -1,0 +1,193 @@
+@function gray($color){
+  @return rgb($color, $color, $color);
+}
+
+$red: rgb(239, 83, 80);
+$orange: rgb(255, 160, 0);
+$yellow: rgb(253, 216, 53);
+$green: rgb(42, 252, 152);
+$blue: rgb(41, 121, 255);
+$indigo: rgb(57, 73, 171);
+$violet: rgb(103, 58, 183);
+
+html, body {
+  background-color: gray(10);
+  margin: 0px;
+  padding: 0px;
+  
+  button, span, h1 {
+    font-family: "Sigmar One", cursive;
+    font-weight: 400;
+  }
+}
+
+#app {
+  height: 100vh;
+  overflow: hidden;
+  position: relative;
+  user-select: none;
+  width: 100vw;
+  
+  #counter {
+    left: 0px;
+    pointer-events: none;
+    position: absolute;
+    top: 10px;
+    width: 100%;
+    z-index: 10;
+    
+    h1 {      
+      margin: 0px;
+      text-align: center;
+    }
+    
+    #counter-value { 
+      color: white;
+      font-size: clamp(70px, 10vw, 120px);
+      height: clamp(70px, 9vw, 110px);
+      line-height: clamp(70px, 9vw, 110px);
+    }
+    
+    #counter-label {
+      color: gray(60);
+      font-size: clamp(20px, 2vw, 30px);
+      height: clamp(20px, 1.8vw, 30px);
+      line-height: clamp(20px, 1.8vw, 30px);
+    }
+  }
+  
+  #keyboard-wrapper {
+    align-items: center;
+    display: flex;
+    height: 100vh;
+    justify-content: center;
+    overflow: hidden;
+    position: relative;
+    width: 100vw;
+    z-index: 2;
+    
+    #keyboard {
+      background-color: gray(20);
+      border: 1px solid rgba(white, 0.05);
+      border-radius: clamp(6px, 0.5vw, 10px);
+      box-shadow: rgba(white, 0.06) 1px 1px 0px 0px;
+      display: flex;
+      flex-direction: column;
+      gap: clamp(6px, 0.5vw, 10px);
+      padding: clamp(6px, 0.5vw, 10px);
+      transform: perspective(800px) rotateX(20deg);
+
+      .keyboard-row {
+        display: flex;
+        gap: clamp(6px, 0.5vw, 10px);
+        
+        &.keyboard-row-2 {
+          margin-left: clamp(24px, 2vw, 40px);
+        }
+        
+        &.keyboard-row-3 {
+          margin-left: clamp(60px, 5vw, 100px);
+        }
+        
+        .keyboard-key {
+          background-color: gray(30);
+          border: 1px solid rgba(white, 0.05);
+          box-shadow: rgba(white, 0.06) 1px 1px 0px 0px; 
+          cursor: pointer;
+          outline: none;
+          transition: border-color 200ms;
+          
+          &:hover,
+          &:focus {
+            background-color: rgba(white, 0.05);
+            border-color: rgba(white, 0.1);
+          }
+        }
+      }
+    }
+  }
+  
+  #letters {    
+    height: 100vh;
+    left: 0px;
+    overflow: hidden;    
+    pointer-events: none;
+    position: absolute;
+    top: 0px;
+    width: 100vw;
+    z-index: 2;
+    
+    .letter {
+      opacity: 0;
+      position: absolute;
+    }
+  }
+
+  .value {
+    border: none;
+    border-radius: clamp(6px, 0.5vw, 10px);
+    color: white;
+    display: block;
+    font-size: clamp(2em, 3vw, 4em);
+    height: clamp(2em, 3vw, 4em);
+    line-height: clamp(2em, 3vw, 4em);
+    padding: 0px;
+    text-align: center;
+    width: clamp(2em, 3vw, 4em);
+  }  
+  
+  #youtube-link {
+    bottom: 10px;
+    top: auto;
+    
+    h1 {      
+      font-family: "Rubik", sans-serif;
+      margin: 0px;
+    }
+  }
+}
+
+@media(max-width: 1000px) {
+  #app {    
+    #keyboard-wrapper {    
+      #keyboard {      
+        border-radius: clamp(5px, 0.8vw, 8px);
+        gap: clamp(4px, 0.8vw, 8px);
+        padding: clamp(4px, 0.8vw, 8px);
+        
+        .keyboard-row {
+          gap: clamp(4px, 0.8vw, 8px);
+          
+          &.keyboard-row-2 {
+            margin-left: clamp(12px, 2vw, 20px);
+          }
+
+          &.keyboard-row-3 {
+            margin-left: clamp(30px, 5vw, 60px);
+          }
+        }
+      }
+    }
+    
+    .value {
+      border-radius: clamp(3px, 0.4vw, 8px);
+      font-size: clamp(0.9em, 3.5vw, 3em);
+    }
+  }
+}
+
+@media(max-width: 600px) {
+  #app {    
+    #keyboard-wrapper {    
+      height: 80vh;     
+       
+      #keyboard {      
+        .keyboard-row {
+          .keyboard-key {
+            box-shadow: none;
+          }   
+        }
+      }
+    }
+  }
+}

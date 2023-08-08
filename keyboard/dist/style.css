@@ -1,0 +1,179 @@
+#youtube-link {
+  align-items: center;
+  border-radius: 6px;
+  display: flex;
+  gap: 10px;
+  left: 50%;
+  padding: 10px;
+  pointer-events: all;
+  position: absolute;
+  text-decoration: none;
+  top: 10px;
+  transform: translateX(-50%);
+  white-space: nowrap;
+  z-index: 100;
+}
+#youtube-link:hover, #youtube-link:focus {
+  backdrop-filter: blur(5px);
+  background-color: rgba(255, 255, 255, 0.1);
+}
+#youtube-link i, #youtube-link h1 {
+  height: 20px;
+  line-height: 20px;
+}
+#youtube-link i {
+  color: #c62828;
+  font-size: 1.25em;
+}
+#youtube-link h1 {
+  color: white;
+  font-size: 1em;
+}
+
+html, body {
+  background-color: #0a0a0a;
+  margin: 0px;
+  padding: 0px;
+}
+html button, html span, html h1, body button, body span, body h1 {
+  font-family: "Sigmar One", cursive;
+  font-weight: 400;
+}
+
+#app {
+  height: 100vh;
+  overflow: hidden;
+  position: relative;
+  user-select: none;
+  width: 100vw;
+}
+#app #counter {
+  left: 0px;
+  pointer-events: none;
+  position: absolute;
+  top: 10px;
+  width: 100%;
+  z-index: 10;
+}
+#app #counter h1 {
+  margin: 0px;
+  text-align: center;
+}
+#app #counter #counter-value {
+  color: white;
+  font-size: clamp(70px, 10vw, 120px);
+  height: clamp(70px, 9vw, 110px);
+  line-height: clamp(70px, 9vw, 110px);
+}
+#app #counter #counter-label {
+  color: #3c3c3c;
+  font-size: clamp(20px, 2vw, 30px);
+  height: clamp(20px, 1.8vw, 30px);
+  line-height: clamp(20px, 1.8vw, 30px);
+}
+#app #keyboard-wrapper {
+  align-items: center;
+  display: flex;
+  height: 100vh;
+  justify-content: center;
+  overflow: hidden;
+  position: relative;
+  width: 100vw;
+  z-index: 2;
+}
+#app #keyboard-wrapper #keyboard {
+  background-color: #141414;
+  border: 1px solid rgba(255, 255, 255, 0.05);
+  border-radius: clamp(6px, 0.5vw, 10px);
+  box-shadow: rgba(255, 255, 255, 0.06) 1px 1px 0px 0px;
+  display: flex;
+  flex-direction: column;
+  gap: clamp(6px, 0.5vw, 10px);
+  padding: clamp(6px, 0.5vw, 10px);
+  transform: perspective(800px) rotateX(20deg);
+}
+#app #keyboard-wrapper #keyboard .keyboard-row {
+  display: flex;
+  gap: clamp(6px, 0.5vw, 10px);
+}
+#app #keyboard-wrapper #keyboard .keyboard-row.keyboard-row-2 {
+  margin-left: clamp(24px, 2vw, 40px);
+}
+#app #keyboard-wrapper #keyboard .keyboard-row.keyboard-row-3 {
+  margin-left: clamp(60px, 5vw, 100px);
+}
+#app #keyboard-wrapper #keyboard .keyboard-row .keyboard-key {
+  background-color: #1e1e1e;
+  border: 1px solid rgba(255, 255, 255, 0.05);
+  box-shadow: rgba(255, 255, 255, 0.06) 1px 1px 0px 0px;
+  cursor: pointer;
+  outline: none;
+  transition: border-color 200ms;
+}
+#app #keyboard-wrapper #keyboard .keyboard-row .keyboard-key:hover, #app #keyboard-wrapper #keyboard .keyboard-row .keyboard-key:focus {
+  background-color: rgba(255, 255, 255, 0.05);
+  border-color: rgba(255, 255, 255, 0.1);
+}
+#app #letters {
+  height: 100vh;
+  left: 0px;
+  overflow: hidden;
+  pointer-events: none;
+  position: absolute;
+  top: 0px;
+  width: 100vw;
+  z-index: 2;
+}
+#app #letters .letter {
+  opacity: 0;
+  position: absolute;
+}
+#app .value {
+  border: none;
+  border-radius: clamp(6px, 0.5vw, 10px);
+  color: white;
+  display: block;
+  font-size: clamp(2em, 3vw, 4em);
+  height: clamp(2em, 3vw, 4em);
+  line-height: clamp(2em, 3vw, 4em);
+  padding: 0px;
+  text-align: center;
+  width: clamp(2em, 3vw, 4em);
+}
+#app #youtube-link {
+  bottom: 10px;
+  top: auto;
+}
+#app #youtube-link h1 {
+  font-family: "Rubik", sans-serif;
+  margin: 0px;
+}
+
+@media (max-width: 1000px) {
+  #app #keyboard-wrapper #keyboard {
+    border-radius: clamp(5px, 0.8vw, 8px);
+    gap: clamp(4px, 0.8vw, 8px);
+    padding: clamp(4px, 0.8vw, 8px);
+  }
+  #app #keyboard-wrapper #keyboard .keyboard-row {
+    gap: clamp(4px, 0.8vw, 8px);
+  }
+  #app #keyboard-wrapper #keyboard .keyboard-row.keyboard-row-2 {
+    margin-left: clamp(12px, 2vw, 20px);
+  }
+  #app #keyboard-wrapper #keyboard .keyboard-row.keyboard-row-3 {
+    margin-left: clamp(30px, 5vw, 60px);
+  }
+  #app .value {
+    border-radius: clamp(3px, 0.4vw, 8px);
+    font-size: clamp(0.9em, 3.5vw, 3em);
+  }
+}
+@media (max-width: 600px) {
+  #app #keyboard-wrapper {
+    height: 80vh;
+  }
+  #app #keyboard-wrapper #keyboard .keyboard-row .keyboard-key {
+    box-shadow: none;
+  }
+}
