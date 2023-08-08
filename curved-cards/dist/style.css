@@ -1,0 +1,128 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family:'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+}
+
+.container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-wrap: wrap;
+    padding: 40px;
+    min-height: 100vh;
+    background: #3c2846;
+}
+
+.card {
+    background: #287bff;
+    display: flex;
+    justify-content: center;
+    align-items: flex-start;
+    position: relative;
+    width: 320px;
+    height: 450px;
+    margin: 30px;
+    border-radius: 20px;
+    border-bottom-left-radius: 160px;
+    border-bottom-right-radius: 160px;
+    box-shadow: 0 15px 0 #fff,
+            inset 0 -15px 0 rgba(255, 255, 255, 0.24),
+            0 45px 0 rgba(0, 0, 0, 0.15);
+    overflow: hidden;
+     
+}
+
+.card::before {
+    content: "";
+    position: absolute;
+    top: -140px;
+    left: -40%;
+    padding: 0;
+    width: 100%;
+    height: 120%;
+    background: linear-gradient(90deg, transparent, rgba(255, 255, 255, 0.2));
+    transform: rotate(35deg);
+    pointer-events: none;
+    filter: blur(5px);
+}
+
+.card:nth-child(1) {
+    background: linear-gradient(to bottom, #ff2ae0, #645bf6);
+}
+
+.card:nth-child(2) {
+    background: linear-gradient(to bottom, #ffec61, #f321d7);
+}
+
+.card:nth-child(3) {
+    background: linear-gradient(to bottom, #24ff72, #9a4eff);
+}
+
+.card .icon {
+    position: relative;
+    width: 140px;
+    height: 120px;
+    background: #3c2846;
+    border-bottom-left-radius: 100px;
+    border-bottom-right-radius: 100px;
+    box-shadow: 0 15px 0 rgba(0, 0, 0, 0.1),
+            inset 0 -8px 0 #fff;
+    z-index: 100;
+    display: flex;
+    justify-content: center;
+    align-items: flex-start;
+}
+
+.card .icon::before {
+    content: "";
+    position: absolute;
+    top: 0;
+    left: -50px;
+    width: 50px;
+    height: 50px;
+    background: transparent;
+    border-top-right-radius: 50px;
+    box-shadow: 15px -15px 0 15px #3c2846;
+}
+
+.card .icon::after {
+    content: "";
+    position: absolute;
+    top: 0;
+    right: -50px;
+    width: 50px;
+    height: 50px;
+    background: transparent;
+    border-top-left-radius: 50px;
+    box-shadow: -15px -15px 0 15px #3c2846;
+}
+
+.card .icon ion-icon {
+    color: #fff;
+    position: relative;
+    font-size: 6em;
+    z-index: 1000;
+    --ionicon-stroke-width: 24px;
+}
+
+
+.card .content {
+    position: absolute;
+    width: 100%;
+    padding: 30px;
+    padding-top: 150px;
+    text-align: center;
+}
+
+.card .content h2 {
+    font-size: 1.8em;
+    color: #fff;
+    margin-bottom: 15px;
+}
+
+.card .content p {
+    color: #fff;
+    line-height: 1.5em;
+}
