@@ -1,0 +1,68 @@
+body{
+  background-image:url("https://i.ibb.co/ChW8Q3N/image.png");
+   background-repeat: no-repeat;
+  background-attachment: fixed;
+  background-size:cover;
+  font-family: 'Quicksand', sans-serif;
+}
+h1{
+  font-size: 64px;
+  margin:0;
+  color:white;
+  text-shadow: 0 0 4px rgb(251,173,213);
+  
+}
+section{
+  text-align:center
+}
+
+.game-container{
+  font-family: 'Fredoka One', cursive;
+  text-shadow: 0 0 7px #FFFFFF;
+  color:#fff;
+  display:grid;
+  grid-template-columns:repeat(3,auto);
+  width:300px;
+  grid-column-gap: 5px;
+  grid-row-gap: 5px;
+  margin:30px auto ;
+}
+.cell{
+  width:100px;
+  height:100px;
+  box-shadow: 0 0 0 1px #333333;
+  border: 1px solid #333333;
+  cursor: pointer;
+   transition: all 0.5s cubic-bezier(0.33, 1, 0.68, 1);
+  line-height: 100px;
+  font-size: 60px;
+  background: rgba( 255, 255, 255, 0.25 );
+box-shadow: 0 8px 32px 0 rgba( 251,173,213, 0.37 );
+backdrop-filter: blur( 4px );
+-webkit-backdrop-filter: blur( 4px );
+border-radius: 10px;
+border: 1px solid rgba( 255, 255, 255, 0.18 );
+}
+button{
+  background: rgba( 255,255,255, 0.25 );
+  cursor:pointer;
+box-shadow: 0 8px 32px 0 rgba( 251,173,213, 0.37 );
+backdrop-filter: blur( 4px );
+border-radius: 5px;
+  font-family: 'Quicksand', sans-serif;
+border: 1px solid rgba( 255, 255, 255, 0.18 );
+  padding: 13px 25px;
+  text-align: center;
+  display: inline-block;
+  font-size: 16px;
+   color:white;
+  text-shadow: 0 0 4px rgb(251,173,213);
+}
+.game-status{
+   color:white;
+  text-shadow: 0 0 4px rgb(251,173,213);
+}
+.cellwon{
+  text-shadow: 0 0 6px #8BF4F7;
+  color:#8BF4F7;
+}
