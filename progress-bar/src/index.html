@@ -1,0 +1,40 @@
+<div class="container">
+  <div class="card">
+    <div class="card__percent">
+      <svg>
+        <defs>
+          <radialGradient id="gradient" cx="50%" cy="50%" r="60%" fx="50%" fy="50%">
+            <stop offset="30%"   stop-color="var(--primary-dark)"/>
+            <stop offset="100%" stop-color="var(--primary-light)"/>
+          </radialGradient>
+        </defs>
+        <circle cx="90" cy="90" r="90" stroke="url(#gradient)" id="circle"></circle>
+      </svg>
+      <div class="circle"></div>
+      <div class="circle circle__medium"></div>
+      <div class="circle circle__small"></div>
+      <div class="card__number">50%</div>
+    </div>
+    <div class="card__description">
+      <h2>Card Title</h2>
+      <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Dicta cumque vitae iure voluptatem alias sed facilis quidem.
+      </p>
+    </div>  
+  </div>
+  
+  <div class="form">
+    <h2 class="form__text">Insert a percentage</h2>
+    <input type="text" 
+           placeholder="50" 
+           id="percent" 
+           onkeypress="return isNumeric(event)"
+           maxlength="3">
+    <button class="form__btn" onclick="changePercent()">Change</button>
+    <div class="tooltip">
+      <span class="material-icons">error</span>
+      <span class="tooltip__text" data-toggle="tooltip">Insert a valid number</span>
+    </div>
+  </div>
+  <a href="https://dribbble.com/myacode" class="dribbble" target="_blank"><ion-icon name="logo-dribbble"></ion-icon>
+  </a>
+</div>
