@@ -1,0 +1,26 @@
+body {
+  margin: 0;
+  padding: 0;
+  height: 100vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background: #f0e5cf;
+}
+
+.container {
+  position: relative;
+}
+.container .plane {
+  bottom: 184px;
+  left: 20px;
+  width: 170px;
+  position: absolute;
+  offset-path: path("M0.5 220.5V193L4.5 164.5L22.5 131L45 107.5L84 88L124.5 83L165.5 88L210 93.5L235.5 88L252.5 76.5L267.5 51L256.5 15.5L239 1H214L197.5 23L205.5 47.5L224.5 58H252.5L282.5 47.5L304.5 28L329 15.5L352.5 8");
+  animation: flight 3s ease infinite;
+}
+@keyframes flight {
+  100% {
+    offset-distance: 100%;
+  }
+}
