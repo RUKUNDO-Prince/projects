@@ -1,13 +1,3 @@
-/*
-
-"No DIV" Arduino UNO with LCD Display and Animation
-Responsive CSS Art for #nodivember
-
-Best viewed in Full Mode. (Tested on Chrome, Firefox and Edge)
-Best rendering observed in FireFox (80.0.1)
-
- */
-
 @import "https://fonts.googleapis.com/css?family=VT323";
 
 :root{
@@ -197,12 +187,6 @@ Best rendering observed in FireFox (80.0.1)
     --color46: rgba(0,0,0,0.3);
     --color47: #3B3F48;
 }
-
-    /* 
-     Q: Why, why you did this?
-     A: I just wanna play a test match.
-     */
-
 body::before{
     background-image: 
 	/* left side - 12 */
