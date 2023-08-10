@@ -22,7 +22,7 @@ navigator.getBattery().then((battery) => {
     updateAllBatteryInfo();
   });
 
-  //When the Battery Levvel Changes
+  //When the Battery Level Changes
   battery.addEventListener("levelchange", () => {
     updateAllBatteryInfo();
   });
