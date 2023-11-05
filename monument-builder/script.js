@@ -1,9 +1,3 @@
-/* 
- * The purpose is to easily create building structures. The building style was inspired by the Monument Valley game https://www.monumentvalleygame.com/mv2
- *
- * Floorplan coordinates and building settings are at the very bottom of the page.
- */
-
 let scene,
 renderer,
 controls,
