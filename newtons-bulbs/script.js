@@ -1,7 +1,5 @@
-// eslint-disable-next-line
 ;(function () {
   const {
-    // GSDevTools,
     gsap,
     gsap: { timeline, to, fromTo } } =
   window;
@@ -23,8 +21,6 @@
     SWING: 0.5,
     EASE: 4 };
 
-  // Disabled for now
-  // const isLightMode = window.matchMedia('(prefers-color-scheme: light)').matches
   const isLightMode = false;
   const CONFIG = {
     ROTATION: 30,
